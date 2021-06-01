@@ -42,16 +42,23 @@
 
 
 
-tiles = [(3, 5), (5, 2), (2, 3)]
+tiles2 = [(3, 5), (5, 2), (2, 3)]
+tiles = [(1, 3), (3, 2), (2, 5), (5, 2), (2, 1)]
 
 def domino_cycle(tiles):
-        for j, k in tiles:
-                # print ("j is " + str(j))
-                # print ("k is "+ str(k))
-                if (j == k ):
-                        print (k)
+        # print (tiles[1][1])
+        # print(len(tiles) - 1)
+        if len(tiles) == 0:
+                return True
+        if len(tiles) == 1:
+                return tiles[0][0] == tiles [0][1]      # Returns False
+        for i in range(len(tiles) - 1):
+                if tiles[i][0] == tiles[i + i][0]:
+                        return True
+                return False
 
-        # print(data)
+        # if tiles[i][0] which is the right digit of a tuple, is == to tiles[i + 1][0]
+      
 
 domino_cycle(tiles)
 
