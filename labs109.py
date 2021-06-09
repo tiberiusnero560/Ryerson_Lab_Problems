@@ -6,6 +6,7 @@
 #     return(str(result))
 #         #### COMPLETE #####
 
+# -------------------------------------------------------------------------------------------------------------------------#
 
 #         #### COMPLETE #####   2 / 55
 # def riffle(items, out=False):
@@ -18,14 +19,14 @@
 #                 result = [*sum(zip(second_half, first_half), ())]
 #         return(result)
        
+# -------------------------------------------------------------------------------------------------------------------------#
                         
-      
 #         #### COMPLETE #####   3 / 55
 # def only_odd_digits(n):
 #        return set(str(n)) - set('13579') == set()
 #         #### COMPLETE #####  
 
-
+# -------------------------------------------------------------------------------------------------------------------------#
 
         ##### COMPLETE #####    4 / 55
 # Cyclops Numbers
@@ -40,6 +41,7 @@
 #                 if str_converted.count("0") > 1: return False  # No Zeros
 #                 return True
 
+# -------------------------------------------------------------------------------------------------------------------------#
 
         ##### Still Working On #####
 # tiles2 = [(3, 5), (5, 2), (2, 3)]
@@ -57,6 +59,7 @@
 #         # if tiles[i][0] which is the right digit of a tuple, is == to tiles[i + 1][0]
 # domino_cycle(tiles)
 
+# -------------------------------------------------------------------------------------------------------------------------#
 
         ##### COMPLETE #####
 # def count_dominators(items):
@@ -74,6 +77,7 @@
 # Runs in 1.572 seconds in replit
 # count_dominators([42, 7, 12, 9, 2, 5])
 
+# -------------------------------------------------------------------------------------------------------------------------#
 
         ##### Some Reason still working on... #####
 # def extract_increasing(digits):
@@ -84,29 +88,32 @@
 #                 print(d)
 # extract_increasing('045349')
 
+# -------------------------------------------------------------------------------------------------------------------------#
 
+# wordlist = open("words_sorted.txt", "r")
+# new_words = {}
 
-wordlist = open("words_sorted.txt", "r")
-new_words = {}
-
-def words_with_letters(words, letters):
-        for word in words.read().split():
-                if letters in word:
-                        print (word)
+# def words_with_letters(words, letters):
+#         for word in words.read().split():
+#                 if letters in word:
+#                         print (word)
 
 
 # words_with_letters(words=wordlist, letters='klore')
 
 
+# -------------------------------------------------------------------------------------------------------------------------#
+
         ##### COMPLETE #####
 # def taxi_zum_zum(moves):
-#     #creating a list of directions
-#     directions = ['N','E','S','W']
-#     #dir points the current index of directions
-#     dir = 0
+#     
+#     directions = ['N','E','S','W']    #creating a list of directions    
+#     dir = 0                           # dir points the current index of directions
+
 #     #current position
 #     x = 0
 #     y = 0
+
 #     #looping through each character in moves
 #     for i in moves:
 #         #if character is L, turning left
@@ -132,3 +139,27 @@ def words_with_letters(words, letters):
 #                 x -= 1 #going west/left
 #     #returning a tuple containing final position
 #     return (x,y)
+
+# -------------------------------------------------------------------------------------------------------------------------#
+
+
+        ##### COMPLETE But look at another way of doing it later ##### 
+# def give_change(amount, coins):
+#         result = []
+#         return give_change_memoization(amount, coins, result)
+
+# def give_change_memoization(amount, coins, result):
+#         if amount == 0:
+#                 return result
+#         while len(coins) > 0 and amount >= coins[0]:
+#                 amount = amount - coins[0]
+#                 result.append(coins[0])
+#         if len(coins) > 0:
+#                 coins = coins[1:]
+#         else:
+#                 return result
+#         return give_change_memoization(amount, coins, result)
+
+# give_change(64, [50, 25, 10, 5, 1])
+
+# -------------------------------------------------------------------------------------------------------------------------#
