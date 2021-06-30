@@ -1,5 +1,6 @@
 import itertools
 
+
 #         #### COMPLETE #####   1 / 55
 # def is_ascending(items):
 #     print("List Items : " + str(items))
@@ -234,6 +235,18 @@ import itertools
 
 # -------------------------------------------------------------------------------------------------------------------------#
 
+def pancake_scramble(text):
+        for i in range(1, len(text)):
+                text = text[i::-1] + text[(i + 1) ::]
+        return text
+
+
+
+
+# -------------------------------------------------------------------------------------------------------------------------#
+
+
+
 #                 rows = 3 cols = 5
 # def create_zigzag(rows, cols, start=1):
        
@@ -266,19 +279,26 @@ import itertools
 # To process 2-dimensional array, you typically use nested loops. The first loop iterates through the row number, the second loop runs through the elements inside of a row.
 
 # -------------------------------------------------------------------------------------------------------------------------#
-
-def count_divisibles_in_range(start, end, n):
-        
+# import math
 
 
+        ### Ask about in class #####
+        # How do we move through without a loop #
+# def count_divisibles_in_range(start, end, n):
+#         count = 0
+#         range = 
+      
 
 
-#       return len([x for x in range(start, end+1) if x % n == 0]
-
-count_divisibles_in_range(start=15, end=17, n=14)
+# count_divisibles_in_range(start=11, end=15, n=13)
 
 
+# import itertools
+# numbers = [100, 200, 300, 400]
 
+# data = list(zip(itertools.count(0, 10), numbers))
+
+# print(data)
 
 
 
@@ -293,17 +313,34 @@ count_divisibles_in_range(start=15, end=17, n=14)
 
 
 # def seven_zero(n):
+#         x = len(str(n))
+#         answer = False
+#         number = ""
+#         value = 0 
+#         d = 0
+#         k = 1
+#         if (n % 2 == 0) or (n % 5 == 0):
+#                 while d <= (x + 1):  # outer loop
+#                         k = 1
+#                         while k < d:    # inner loop
+#                                 number = "7" * (k) + "0" * (d - k)
+#                                 k += 1
+                               
+#                         d += 1
+#                 value = int(number)
+#                 if value % n == 0:
+#                         return value
+#         else:
+#                 while answer == False:
+#                         number = number + "7"
+#                         value = int(number)
+#                         if (value % n) == 0:
+#                                 return value
+#         print(value)
+#         return value
+        
 
-#         for d in n:
-#                 for k in n:
-#                         if n % 2 == 0 or n % 5 == 0:
-#                                 print(n)
-
-# seven_zero(42)
-
-# def zero_generator(number):
-#         for digits in number:
-#                 for d 
+# seven_zero(4)
 
 
  # -------------------------------------------------------------------------------------------------------------------------#
@@ -342,7 +379,25 @@ count_divisibles_in_range(start=15, end=17, n=14)
 # -------------------------------------------------------------------------------------------------------------------------#
 
 
+# def count_growlers(animals):
+#         count = 0
+#         for animal in animals:
+#                 if (animal[0] == "tac") or (animal[0] == "god"):
+#                         count += 0
+                
 
+
+# count_growlers(['god', 'cat', 'cat', 'tac', 'tac', 'dog', 'cat', 'god'])
+
+
+
+
+
+
+# -------------------------------------------------------------------------------------------------------------------------#
+
+
+        ##### Ask about in class #####
 # def remove_after_kth(items, k=1):
 #         res_dict = {}
 #         result = []             # Append to this only if the elements count is still at most equal to k
@@ -462,5 +517,125 @@ count_divisibles_in_range(start=15, end=17, n=14)
 # -------------------------------------------------------------------------------------------------------------------------#
 
 
+# words = ['tantaras', 'tarantas', 'tartanas', 'university']
+
+# def unscramble(words, word):
+
+
+# unscramble(words, word='tartnaas')
+
+# -------------------------------------------------------------------------------------------------------------------------#
+        
+        ##### COMPLETE #####    (0.538s)
+# def reverse_vowels(text):
+#         vowels = ''
+#         for char in text:
+#                 if char in "aeiouAEIOU":
+#                         vowels += char
+#         string = ""
+#         for char in text:
+#                 if char in "aeiouAEIOU":
+#                         if char.isupper()==True:
+#                                 string += str(vowels[-1].upper())
+#                                 vowels = vowels[:-1]
+#                         else:
+#                                 string += str(vowels[-1].lower())
+#                                 vowels = vowels[:-1]
+#                 else:
+#                         string += char
+#         return string
+# reverse_vowels('revorse the vewels')
+
+
+
+# -------------------------------------------------------------------------------------------------------------------------#
+
+
+
+
+        ##### COMPLETE #####    (0.653s)
+# def knight_jump(knight, start, end):
+#         result = []
+#         for i in range(0, len(start)):
+#                 result.append(abs(start[i] - end[i]))
+#         if set(knight) == set(result):
+#                 return True
+#         return False
+
+
+# -------------------------------------------------------------------------------------------------------------------------#
+
+# def sum_of_two_squares(n):
+#         if n < 2:
+#                 result = 1                      # base case
+#         else:
+#                 result = n * sum_of_two_squares(n - 1)   # linear recursive call
+
+#         print(result)       
+#         return result
+
+
+# sum_of_two_squares(2)
+
+# -------------------------------------------------------------------------------------------------------------------------#
+
+# def is_zigzag(n):
+#         fact = [0 for i in range(n + 1)]
+#         zig = [0 for i in range(n + 1)]
+
+#         fact[0] = 1
+#         for i in range(1, n + 1):
+#                 fact[i] = fact[i - 1] * i
+                
+#         zig[0] = 1
+#         zig[1] = 1
+
+#         print("zig zag numbers ", end = '')
+
+#         print(zig[0], zig[1], end = " ")
+
+#         for i in range(2, n):
+#                 sum = 0
+
+#                 for k in range(0, i):
+#                         sum += ((fact[i - 1] // (fact[i - 1 - k] * fact[k])) * zig[k] * zig[i - 1 - k])
+
+#                 zig[i] = sum // 2
+
+#                 print(sum // 2, end = " ")
+
+# is_zigzag(25391)
+
+
+               
+# -------------------------------------------------------------------------------------------------------------------------#
+
+
+
+
+
+
+
+
+# -------------------------------------------------------------------------------------------------------------------------#
+
+
+
+
+
+
+
+
+# -------------------------------------------------------------------------------------------------------------------------#
+
+
+
+
+
+
+
+
+
+# -------------------------------------------------------------------------------------------------------------------------#
 
 
