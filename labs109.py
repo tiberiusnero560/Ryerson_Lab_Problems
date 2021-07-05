@@ -196,15 +196,17 @@ import itertools
 
 # -------------------------------------------------------------------------------------------------------------------------#
 
-# def is_left_handed(pips):
-#         left_hand_combos = [(1,2,3)]
-#         right_hand_combos = []
-#         result = []
-#         for i in pips:
-#                 result.append(i)
-#         print(result)
 
-# is_left_handed((1, 2, 3))
+
+def is_left_handed(pips):
+        left_hand_combos = [(1,2,3)]
+        right_hand_combos = []
+        result = []
+        for i in pips:
+                result.append(i)
+        print(result)
+
+is_left_handed((1, 2, 3))
 
 
 
@@ -215,8 +217,8 @@ import itertools
         # 4 players each play one card from their hand to the trick
         # Committing to their play in clockwise order starting from player who first plays into the trick
         # Winner is determined by the following
-                # If one or more of the cards of the trump suit have been played to the trick, the trick is won by the highest ranking trump card, regardless of the other cards played
-                # If no trump card have been played to the trick, the trick is won by the highest card of the suit of the first card played to the trick. Cards of any other suits regardless of rank, are powerless to win that trick
+        #         If one or more of the cards of the trump suit have been played to the trick, the trick is won by the highest ranking trump card, regardless of the other cards played
+        #         If no trump card have been played to the trick, the trick is won by the highest card of the suit of the first card played to the trick. Cards of any other suits regardless of rank, are powerless to win that trick
         
 
 # def winning_card(cards, trump=None):
@@ -235,10 +237,12 @@ import itertools
 
 # -------------------------------------------------------------------------------------------------------------------------#
 
-def pancake_scramble(text):
-        for i in range(1, len(text)):
-                text = text[i::-1] + text[(i + 1) ::]
-        return text
+
+        ##### Complete #####
+# def pancake_scramble(text):
+#         for i in range(1, len(text)):
+#                 text = text[i::-1] + text[(i + 1) ::]
+#         return text
 
 
 
@@ -247,34 +251,21 @@ def pancake_scramble(text):
 
 
 
-#                 rows = 3 cols = 5
+#                 # rows = 3 cols = 5
 # def create_zigzag(rows, cols, start=1):
+#         rows = 3
+#         cols = 5
+#         grid = rows * cols
+#         a = [[rows] * cols for i in range(rows)]
+#         for row in a:
+#                 for elem in row:
+#                         print(elem)
+
+
        
-#         Rows = [[str(rows)]] 
-#         Cols = [[str(cols)]] 
-#         print(Rows)
-#         print(Cols)
-#         res = []
-#         for el in Rows:
-#                 print(el[])
-                
-        # print(res)
-        # start_string = str(start)
-        # digit_map = map(int, start_string)
-        # start_list = list(start_string)
-        # start = start_list[0]
-        # To account for arbitrary numbers for start
 
-        # return_list = []
-
-        # print(start_list)
-        # return_list[0] == start
-        # print(return_list)
-        # cols_list = []
-        # cols_list = cols
-        # print(cols_list)
-
-# create_zigzag(4,2, start=1)
+#         # print(a)
+# create_zigzag(3,5, start=1)
 
 # To process 2-dimensional array, you typically use nested loops. The first loop iterates through the row number, the second loop runs through the elements inside of a row.
 
@@ -366,12 +357,14 @@ def pancake_scramble(text):
 #         middle = len(board) // 2
 #         player = [board[:middle]]
 #         opponent = [board[middle:]]
-
+#         board = dict()
 #         for i in range(len(board)):
-                # Changed to count the array so I can use the house variable to choose the 'house' 
-#                 print(i)
-        
+#                print(board[house])
 
+#         print((f"middle = {middle}"))
+#         print((f"player = {player}"))
+#         print((f"opponent = {opponent}"))
+    
 # oware_move([0, 2, 1, 2], 1)
 
 
@@ -381,9 +374,14 @@ def pancake_scramble(text):
 
 # def count_growlers(animals):
 #         count = 0
-#         for animal in animals:
-#                 if (animal[0] == "tac") or (animal[0] == "god"):
-#                         count += 0
+#         animals_dict = dict()
+#         for animal in enumerate(animals):
+#                 print(animal[1])
+          
+                        
+#         print(count)
+#         print(animals[0])
+#         print(animals_dict)
                 
 
 
@@ -619,7 +617,16 @@ def pancake_scramble(text):
 
 # -------------------------------------------------------------------------------------------------------------------------#
 
+# import decimal
+# import math
 
+# def fibonacci_word( k ):
+#     decimal.getcontext().prec = 165
+#     root_5 = decimal.Decimal( 5 ).sqrt()
+#     phi = ( 1 + root_5 ) / 2
+#     r = phi / ( 1 + ( phi * 2 ) )
+
+#     return math.floor(  ( k + 2 ) * r ) - math.floor( ( k + 1 ) * r )
 
 
 
