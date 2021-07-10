@@ -396,29 +396,23 @@ is_left_handed((1, 2, 3))
 
 
         ##### Ask about in class #####
-# def remove_after_kth(items, k=1):
-#         res_dict = {}
-#         result = []             # Append to this only if the elements count is still at most equal to k
+def remove_after_kth(items, k=1):
+        res_dict = {}
+        result = []             # Append to this only if the elements count is still at most equal to k
         
-#         for i in range(len(items)):
-#                 # print(f"i is : {i}")
-#                 res_dict[items[i]] = items.count(items[i])
-#                 if i not in res_dict.values():
-#                         res_dict.update(items[i])
+        for i in range(len(items)):
+                # print(f"i is : {i}")
+                res_dict[items[i]] = items.count(items[i])
+                if i not in res_dict.values():
+                        res_dict.update(items[i])
         
         
-
-
-#         # for item in res_dict.values():
-#         #         print(item)
-                
-#         # return result
-#         print(f"result dict:  {res_dict}")
-#         print(f"result list:  {result}")
+        print(f"result dict:  {res_dict}")
+        print(f"result list:  {result}")
 
         
 
-# remove_after_kth([1, 2, 3, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5, 4, 3, 2, 1], k=1)
+remove_after_kth([1, 2, 3, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5, 4, 3, 2, 1], k=1)
 
 # There's a couple of problems here. First of all, the fact that you're using count()means that the dictionary entry for that item is getting set to its final value instantly. So if for example, you had k=1, and an item appears in the list twice, the first time it's encountered in the loop, its dictionary entry is set to 2. Which means it won't ever be added to result. You need to be updating  the dictionary in a way that allows each key to be appended to the list k times, no more, no less
 # -------------------------------------------------------------------------------------------------------------------------#
