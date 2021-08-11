@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Portfolio Site</title>
+        <meta name="description" content="Portfolio site">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/CSS/styles.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/41ba69b621.js" crossorigin="anonymous"></script>
+        <script src="/Scripts/gtag.js"></script>
+        <script src="/Scripts/index.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65954170-2""></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65954170-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-65954170-2');
+    </script>
+
+
+
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <img src="/Assets/TFE Logo.jpg">
+            </div>
+
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About Me</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#my-work" class="nav__link">My work</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Introduction Section -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi I am <strong>Kyle LeBlanc</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Computer Science & CyberSecurity Student </p>
+            <img src="/Assets/kyle-nice-wedding-photo.jpg" class="intro__img">
+        </section>
+
+        <!-- My Services Section -->
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">My Skills</h2>
+            <div class="services">
+                    <div class="service">
+                        <h3>Web Development</h3>
+                        <p> 
+                            I decided to choose web development as a way to refine my learning to a narrow area to be able to be confident enough to begin the job search while continuing to learn new skills as I have been. I have the strongest foundation of knowledge in this sector, with excellent HTML & CSS skills (it's pretty easy) and an intermediate knowledge of javascript. Some experience with React.js & bootstrap but wanted to learn vanilla first
+                        </p>
+                    </div> <!-- <-- Closing tag for service class-->
+
+                    <div class="service">
+                        <h3>Software Development</h3>
+                        <p>
+                           Strong foundation of programming principles, data structures and algorithms. I have had time specifically learning <strong>C++, Python, Javascript and C#</strong> Some of these languages as you may know have similar syntax which makes it easier once you have the foundation of programming principles. Comfortable working with APIs and Databases. Strongest knowledge is with the MERN stack. 
+                        </p>
+                    </div> <!-- <-- Closing tag for service class-->
+
+                    <div class="service">
+                        <h3>Penetration Testing</h3>
+                        <p>
+                            I have been learning the fundamentals of the Cyber Security field in recent months. I am not committing the same time as the others, but I believe it can be extremely valuable to have a background in security so that one can be mindful of security flaws and vulnerabilities while writing the code itself. Most vulnerabilities are implemented due to human errors in the code itself. I believe this can be a valuable asset.
+                        </p>
+                    </div> <!-- <-- Closing tag for service class-->
+            </div> <!-- Closing tag for services class  (container) -->
+
+            <a href="#my-work" class="btn">work</a>
+        </section>
+
+
+        <!-- About me section -->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about" id="about-me">Who I am</h2>
+            <p class="section__subtitle section__subtitle--about">Ryerson University Computer Science Student</p>
+
+            <div class="about-me__body">
+                <p>
+                    My name is Kyle LeBlanc and I have been a self taught developer currently living in Ottawa Ontario. I have been toying with the idea of becoming a developer for many years without a real commitment. I started college right out of high school for video game development but didn't complete it due to financial issues among others. To be completely honest, I wasn't ready right out of school I realize now. I have decided to return to school by taking online courses one at a time while working on the side, and building projects and the framework for my future businesses.
+                </p>
+                <p>
+                    I have completed CCPS109 Computer Science I in Python. I am preparing for a month or so before starting Discrete Math which will be difficult for me. Afterwards Computer Science II will be in Java. 
+            </div>
+
+            <img src="/Assets/laptop01.jpg" class="about-me__img1">
+            <img src="/Assets/NSAMonitorsSetup.jpg" class="about-me__img2">
+
+        </section>
+        
+
+        <!-- My Work -->
+        <section class="my-work" id="my-work">
+            <h2 class="section__title section__title--work">My Work</h2>
+            <p class="section__subtitle section__subtitle--work">A Showcase of my work so far</p>
+
+            <div class="portfolio">
+                <!-- Portfolio Item 01 -->
+                <a href="portfolio-item1.html" class=portfolio__item> Professional Portfolio Website
+                    <img src="/Assets/portfolio-website-screenshot.PNG" class="portfolio__img">
+                </a>
+                <!-- Portfolio Item 02 -->
+                <a href="portfolio-item2.html" class=portfolio__item> Press For Earth (under development)
+                    <img src="/Assets/PFEBanner.png" class="portfolio__img">
+                </a>
+                <!-- Portfolio Item 03 -->
+                <a href="portfolio-item3.html" class=portfolio__item> Tech For Earth (under development)
+                    <img src="Assets/TFEBanner.jpg" class="portfolio__img">
+                </a>
+                <!-- Portfolio Item 04 -->
+                <a href="portfolio-item4.html" class=portfolio__item>
+                    <img src="/Assets/Ryerson image.PNG"" class="portfolio__img"> Ryerson CCPS109 Python Lab Problems and solutions
+              
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:kyle.leblanc88@gmail.com" class="footer__link">Kyle.LeBlanc88@gmail.com </a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.github.com">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://twitter.com/KyleLeBlancVlog">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/kylejordenleblanc/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.instagram.com/kyle_leblanc1/">
+                        <i class="fab fa-instagram-square"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        </script>
+    </body>
+
+</html>
